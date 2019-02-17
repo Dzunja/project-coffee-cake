@@ -1,1 +1,1 @@
-project-coffee-cake
+coffee-cake
