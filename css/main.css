@@ -100,10 +100,6 @@ textarea {
   box-sizing: border-box;
 }
 
-section {
-  overflow: hidden;
-}
-
 body {
   font-size: 50%;
   font-family: 'Montserrat', sans-serif;
@@ -122,7 +118,7 @@ h1 {
 
 h2 {
   font-size: 10em;
-  line-height: 10px;
+  line-height: 56px;
   letter-spacing: 25;
   font-weight: 700;
   color: #000000;
@@ -131,9 +127,10 @@ h2 {
 
 h3 {
   font-size: 4.8em;
-  line-height: 40px;
+  line-height: 30px;
   letter-spacing: 25;
   color: #000000;
+  margin: .6em 0;
 }
 
 h4 {
@@ -163,11 +160,13 @@ a {
   line-height: 30px;
   letter-spacing: 25;
   text-decoration: none;
+  transition: all .5s;
 }
 
 a:link,
 a:visited {
   color: #a55b61;
+  transition: all .5;
 }
 
 a:hover {
@@ -185,8 +184,11 @@ i {
   font-style: italic;
 }
 
+strong {
+  font-weight: 700;
+}
 .container {
-  max-width: 1250px;
+  max-width: 1500px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -299,6 +301,10 @@ img {
   height: 100%;
 }
 
+section {
+  overflow: hidden;
+}
+
 /* ========= HERO ============== */
 
 .hero {
@@ -337,12 +343,9 @@ img {
   vertical-align: middle;
   margin-left: 6px;
 }
+/* ============ END HERO  ============= */
 
 /* ============ CAKE ============= */
-
-header {
-  margin-bottom: 25px;
-}
 
 header h5 {
   border-left: 1px solid #dfdce3;
@@ -365,6 +368,11 @@ header h5 {
 .cake article:last-child {
   border-bottom: none;
 }
+.cake .section-header,
+.cake .section-header:after  {
+  background: transparent;
+}
+
 
 .cake article h3 {
   display: inline-block;
@@ -380,12 +388,215 @@ header h5 {
   position: relative;
 }
 
+/* ============ END CAKE  ============= */
+
+/* ============ COFFEE ============= */
+
+
+.section-header p{
+  font-size: 2.4em;
+  font-weight: 300;
+  max-width: 750px;
+  border-left: 2px solid #dfdce3;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+
+.coffee .fade p {
+  margin-bottom: 25px;
+}
+
+.coffee .btn {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.section-header {
+  background-color: #fbc56a;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: -1;
+}
+
+.section-header:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #fbc56a ;
+  display: block;
+  position: absolute;
+  left: -100%;
+  top: 0;
+}
+
+.section-header h2 {
+  display: inline-block;
+  margin-bottom: .1em;
+}
+
+.coffee .img {
+  position: absolute;
+ top: 0;
+ left: 0;
+ width: 120px;
+}
+
+.coffee h3 {
+  margin-left: 150px;
+  margin-bottom: 100px;
+} 
+
+.coffee .inner-text >div {
+  border-left: 1px solid #dfdce3;
+  padding-left: 25px;
+}
+
+.coffee .inner-text .btn {
+  margin-left: 25px;
+  margin-top: 30px;
+}
+
+.coffee .inner {
+  padding-bottom: 25px;
+}
+/* ============ END COFFEE  ============= */
+
+/* ============  EVENTS  ============= */
+
+.events, .form-reservation, .footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.events .inner-text h3 span {
+  font-weight: 200;
+}
+
+.events .inner-text h3 {
+  line-height: 32px;
+}
+
+.events .inner-text .data {
+  font-size: 1.8em;
+  font-style: italic;
+}
+
+.events .inner-text h4 {
+  margin-bottom: .3em;
+}
+
+.events .inner-text >div {
+  padding-left: 20px;
+}
+/* ============ END EVENTS  ============= */
+
+/* ============  PLACE  ============= */
+
+.our-place header,
+.our-place .center {
+  background-color: #e8e8e8;
+}
+
+.our-place header:after{
+  background-color: #e8e8e8;
+}
+
+/* ============ END PLACE  ============= */
+
+/* ============  RESERVATION  ============= */
+
+.form-reservation h3 span {
+  font-weight: 200;
+}
+
+.form-reservation h3 {
+  line-height: 32px;
+}
+
+/* ============ END RESERVATION  ============= */
+
+/* ============  FORM  ============= */
+
+label,textarea {
+  display: block;
+}
+
+input,textarea {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 9px 0;
+  margin-bottom: 23px;
+  color: black;
+  border: none;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+textarea {
+  border: 1px solid #e8e8e8;
+}
+
+input:focus,textarea:focus {
+  border-bottom: 2px solid #fbc56a;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+/* ============  END FORM  ============= */
+.center .slick-slide { 
+  border: 15px solid white;
+}
+
+.center .slick-center {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  transform: scale(1.5);    
+}
+
+.center .slick-list { 
+  padding:45px 60px !important;
+  margin-left:30px !important;
+}
+
+.center .slick-dots {
+  bottom: -16px;
+  background: #e8e8e8;
+}
+
+/* ================ FOOTER ============= */
+
+.footer {
+  background-color: #373737;
+}
+
+.footer * {
+  color: #fff;
+}
+
+.footer li {
+  line-height: 22px;
+}
+
+.footer li a {
+  font-size: 20px;
+}
+
+.footer li a:hover {
+  color: #fbc56a;
+}
+
 @media only screen and (min-width: 768px) {
+
+  h3 {
+    line-height: 60px;
+  }
   .hero .border {
     max-width: 50%;
     margin-left: auto;
     margin-right: 40px;
   }
+
+   /* ============ CAKE 768px ============= */
 
   .cake header {
     padding-left: 100px;
@@ -399,8 +610,137 @@ header h5 {
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  /* ============ COFFEE 768px ============= */
+
+  .coffee .slick-initialized .slick-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  } 
+
+  .coffee .inner-text {
+    width: 40%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .coffee .img {
+    position: initial;
+    width: auto;
+  }
+  .coffee .slick-slide h3{
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+
+.coffee .inner {
+  padding-bottom: 25px;
 }
 
+ /* ============ EVENT 768px ============= */
+
+ .events {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .events .inner-text h3 {
+   line-height: 42px;
+ }
+
+ .events .inner-text {
+   width: 40%;
+ }
+
+ .events .event-img {
+   width: 60%;
+ }
+
+
+.events  .event-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.events .event-img {
+  width: 60%;
+  height: 0;
+  padding-bottom: 30%;
+  overflow: hidden;
+  position: relative;
+  margin-left: 97px;
+}
+
+  /* ============= resevation 768px============= */
+  .form-reservation {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-reservation h3 span {
+    line-height: 42px;
+  }
+
+  label {
+    width: 47%;
+  }
+
+  label:nth-of-type(2),
+  label:nth-of-type(4) {
+    margin-right: 34px;
+  }
+  label.name {
+    width: 100%;
+  }
+
+  label {
+    display: inline-block;
+  }
+ input{
+  font-size: 18px;
+  }
+
+.section-header {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  width: 80%;
+}
+
+/* =============== footer 768px ===================  */
+.footer ul {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.footer li {
+  line-height: 24px;
+}
+
+.footer ul li:first-child{
+  margin-right: 80px;
+}
+.footer ul li:last-child {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer ul li:last-child a {
+  display: block;
+  font-size: 40px;
+  margin: 10px;
+}
+}
 @media only screen and (min-width: 1024px) {
   .container {
     padding-left: 70px;
@@ -423,27 +763,50 @@ header h5 {
     margin-bottom: 55px;
   }
 
-  .cake-image1,
-  .cake-image4 {
-    width: 640px;
-    height: 420px;
+  .cake article:nth-of-type(1) .cake-image,
+  .cake article:nth-of-type(4) .cake-image {
+    width: 60%;
+    padding-bottom: 40%;
     padding-top: 0;
+    position: relative;
+    overflow: hidden;
   }
 
-  .cake-image2,
-  .cake-image3 {
-    width: 580px;
-    height: 400px;
-    padding-top: 0;
+  .cake article:nth-of-type(1) .cake-image img,
+  .cake article:nth-of-type(4) .cake-image img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+
   }
 
-  .cake .cake-image2 {
+  .cake article:nth-of-type(2) .cake-image,
+  .cake article:nth-of-type(3) .cake-image {
+    width: 50%;
+    padding-bottom: 30%;
+    padding-top: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cake article:nth-of-type(2) .cake-image img,
+  .cake article:nth-of-type(3) .cake-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0%;
+    left: 0;
+  }
+
+  .cake article:nth-of-type(2) .cake-image {
     position: relative;
     bottom: 43px;
     border: 15px solid #fff;
   }
 
-  .cake .cake-image4 {
+  .cake article:nth-of-type(4) .cake-image {
     position: relative;
     bottom: 60px;
     border: 15px solid #fff;
@@ -467,6 +830,14 @@ header h5 {
   .cake .inner-text *:not(h3) {
     padding-left: 20px;
   }
+
+  .events, .form-reservation, .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+
+ 
 }
 
 @media only screen and (min-width: 1200px) {
@@ -557,6 +928,22 @@ header h5 {
   .hero .inner span {
     font-size: 14px;
     margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+
+  .cake article:nth-of-type(1) .cake-image,
+  .cake article:nth-of-type(4) .cake-image {
+
+    padding-bottom: 35%;
+
+  }
+
+  .cake article:nth-of-type(1) .cake-image img,
+  .cake article:nth-of-type(4) .cake-image img {
+    width: 100%;
+    height: auto;
   }
 }
 
