@@ -358,6 +358,7 @@ header h5 {
   position: absolute;
   right: 20px;
   top: 20px;
+  line-height: 30px;
 }
 
 .cake article {
@@ -577,8 +578,10 @@ input:focus,textarea:focus {
   line-height: 22px;
 }
 
-.footer li a {
-  font-size: 20px;
+.footer li i {
+  font-size: 18px;
+  color: #a55b61;
+  margin-right: 15px;
 }
 
 .footer li a:hover {
@@ -598,7 +601,8 @@ input:focus,textarea:focus {
 
    /* ============ CAKE 768px ============= */
 
-  .cake header {
+  .cake header,
+  .section-header {
     padding-left: 100px;
   }
 
@@ -737,8 +741,12 @@ input:focus,textarea:focus {
 
 .footer ul li:last-child a {
   display: block;
-  font-size: 40px;
+  font-size: 28px;
   margin: 10px;
+}
+
+.footer li i {
+  font-size: 26px;
 }
 }
 @media only screen and (min-width: 1024px) {
@@ -825,6 +833,7 @@ input:focus,textarea:focus {
 
   .cake span {
     top: 32px;
+    line-height: 60px;
   }
 
   .cake .inner-text *:not(h3) {
@@ -858,6 +867,7 @@ input:focus,textarea:focus {
     font-size: 16px;
   }
 
+  .btn,
   a.btn,
   .btn:link,
   .btn:visited {
