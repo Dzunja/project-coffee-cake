@@ -105,6 +105,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #040404;
   font-weight: 400;
+  display: none;
 }
 
 h1 {
@@ -163,6 +164,9 @@ a {
   transition: all .5s;
 }
 
+a {
+  cursor: pointer; 
+}
 a:link,
 a:visited {
   color: #a55b61;
@@ -170,7 +174,8 @@ a:visited {
 }
 
 a:hover {
-  color: #95373f;
+  color: #784045;
+  transition: all .4s;
 }
 
 li {
@@ -203,16 +208,28 @@ img {
 .btn,
 .btn:link,
 .btn:visited {
-  background-color: #a55b61;
-  color: #fff;
+ 
+  color: #784045;
   font-weight: 500;
   width: 170px;
   display: block;
   text-align: center;
   padding-top: 7px;
   padding-bottom: 7px;
+  border: 2px solid #784045;
 }
 
+.btn:hover {
+  background: #784045;
+  transition: all .4s;
+  color: white;
+}
+
+.btn-center {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
 /* ================= HEADER ================== */
 
 .nav {
@@ -230,6 +247,17 @@ img {
   font-size: 24px;
   display: block;
   padding: 15px 0;
+}
+
+.nav a:link,
+.nav a:visited {
+  color: black;
+  line-height: 17px;
+}
+
+.nav a:hover {
+  color: #95373f;
+  translate: all .5s;
 }
 
 .header {
@@ -312,6 +340,10 @@ section {
   background-size: cover;
   background-position: bottom left;
   background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, .9)), url("../img/hero.png");
+}
+.hero .btn {
+  background: #95373f;
+  color: white;
 }
 
 .hero .content {
@@ -461,11 +493,13 @@ header h5 {
 .coffee .inner {
   padding-bottom: 25px;
 }
+
+
 /* ============ END COFFEE  ============= */
 
 /* ============  EVENTS  ============= */
 
-.events, .form-reservation, .footer {
+.events,.footer {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -493,8 +527,7 @@ header h5 {
 
 /* ============  PLACE  ============= */
 
-.our-place header,
-.our-place .center {
+.our-place header {
   background-color: #e8e8e8;
 }
 
@@ -504,14 +537,100 @@ header h5 {
 
 /* ============ END PLACE  ============= */
 
-/* ============  RESERVATION  ============= */
 
+/* ================ FOOTER =================== */
+.footer {
+  background-image: url('../img/footer-background.png');
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.footer .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .9);
+}
+
+.footer .container > div {
+  z-index: 1;
+  position: relative;
+}
+
+
+
+.contact-info ul:nth-of-type(1) li:nth-of-type(1):before {
+   content: "\f095";
+}
+
+.contact-info ul:nth-of-type(1) li:nth-of-type(2):before {
+  content: "\f3c5";
+}
+
+.contact-info ul:nth-of-type(1) li:nth-of-type(3):before {
+  content: "\f017";
+}
+
+/* ============  RESERVATION  ============= */
+.contact-info ul:nth-of-type(1) li {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+.contact-info  li a {
+  color: #fff;
+  font-size: 16px;
+}
+.contact-info ul:nth-of-type(1) li:before {
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  position: absolute;
+  left: 4px;
+}
+
+.social-links.unstyle-list {
+  padding: 50px 30px;
+}
+.social-links li{
+  background: transparent;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border: 2px;
+  border: 2px solid white;
+  margin-right: 25px;
+  /* margin-top: 50px; */
+}
+
+.social-links li a:hover {
+  background: white;
+  transition: all .5s;
+  color: black;
+}
+
+.social-links li i {
+  color: #fff;
+  font-size: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .form-reservation h3 span {
   font-weight: 200;
 }
 
-.form-reservation h3 {
+.form-reservation h3,
+.contact-info * {
   line-height: 32px;
+  color: #fff;
 }
 
 /* ============ END RESERVATION  ============= */
@@ -528,22 +647,43 @@ input,textarea {
   font-weight: 300;
   padding: 9px 0;
   margin-bottom: 23px;
-  color: black;
+  color: #656565;
   border: none;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #656565;
+  background: transparent;
 }
 
 textarea {
-  border: 1px solid #e8e8e8;
+  border: 1px solid #656565;
 }
 
 input:focus,textarea:focus {
   border-bottom: 2px solid #fbc56a;
-  border-top: none;
+  border-top: none!important;
   border-left: none;
   border-right: none;
+  color: #fff;
+  opacity: .8;
+}
+
+.btn-transparent {
+  background: transparent;
+  border: 2px solid #fff;
+  color: white;
+}
+
+.btn-transparent:hover {
+  background: white;
+  color: black;
+  transition: all .5s;
 }
 /* ============  END FORM  ============= */
+
+.center {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .center .slick-slide { 
   border: 15px solid white;
 }
@@ -555,46 +695,105 @@ input:focus,textarea:focus {
 }
 
 .center .slick-list { 
-  padding:45px 60px !important;
-  margin-left:30px !important;
+  padding:40px 60px !important;
 }
 
 .center .slick-dots {
-  bottom: -16px;
-  background: #e8e8e8;
+  bottom: -33px;
 }
 
+.center .slick-slide.slick-current {
+  /* max-height: 500px; */
+  /* overflow: hidden; */
+  /* position: relative;
+  top: 30px; */
+}
+
+ .center .slick-dots li button:before,
+ .fade .slick-dots li button:before   {
+  font-size: 14px;
+}
 /* ================ FOOTER ============= */
 
-.footer {
-  background-color: #373737;
+
+.btn-back {
+  height: 50px;
+  width: 50px;
+  background: #fbc56a;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: -50px;
 }
 
-.footer * {
-  color: #fff;
+.btn-back:hover {
+  opacity: .6;
+  transition: opacity .4s;
 }
 
-.footer li {
-  line-height: 22px;
+.btn-back  i{
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-134deg);
 }
 
-.footer li i {
-  font-size: 18px;
+
+/* ======= MODAL =========== */
+
+.modal ul li:nth-of-type(2) {
+  background-color: #feecce;
+}
+
+.modal ul li{
+  font-size: unset;
+}
+
+.modal .menu-cake >div {
+  position: relative;
+}
+.modal .menu-cake >div span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.8em;
   color: #a55b61;
+  line-height: 20px;
+}
+
+.modal .menu-cake h4 {
+  margin-bottom: 0;
+  padding-right: 46px;
+}
+
+.modal .menu-cake p {
+  margin-top: 0;
+  line-height: 17px;
+  font-size: 14px;
+}
+
+.modal .menu-coffee *:not(h4) {
+  font-size: 18px;
+}
+
+.modal .menu-coffee ul {
+  display: flex;
+}
+
+.modal .menu-coffee ul li {
   margin-right: 15px;
 }
-
-.footer li a:hover {
-  color: #fbc56a;
-}
-
 @media only screen and (min-width: 768px) {
 
   h3 {
     line-height: 60px;
   }
   .hero .border {
-    max-width: 50%;
+    max-width: 45%;
     margin-left: auto;
     margin-right: 40px;
   }
@@ -617,6 +816,10 @@ input:focus,textarea:focus {
 
   /* ============ COFFEE 768px ============= */
 
+  .coffee .fade {
+    position: relative;
+    top: -40px;
+  }
   .coffee .slick-initialized .slick-slide {
     display: flex;
     flex-direction: row;
@@ -681,11 +884,52 @@ input:focus,textarea:focus {
   margin-left: 97px;
 }
 
+
+.center .slick-list { 
+  padding:120px 60px 40px!important;
+ 
+}
+.center .slick-slide.slick-current {
+  max-height: 500px; 
+  overflow: hidden;
+}
+
+.center {
+  position: relative;
+  top: -60px;
+}
   /* ============= resevation 768px============= */
+
+
+  #site-footer {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+#site-content {
+  position: relative;
+  z-index: 999;
+  min-height: 100%;
+  min-height: 100vh;
+  background: white;
+}
+  .footer .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-content: center;
+  }
   .form-reservation {
-    max-width: 620px;
-    margin-left: auto;
-    margin-right: auto;
+   width: 70%;
+   max-width: 720px;
+  }
+
+  .contact-info {
+    width: 25%;
+    padding-top: 150px;
   }
 
   .form-reservation h3 span {
@@ -717,37 +961,6 @@ input:focus,textarea:focus {
   width: 80%;
 }
 
-/* =============== footer 768px ===================  */
-.footer ul {
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
-}
-
-.footer li {
-  line-height: 24px;
-}
-
-.footer ul li:first-child{
-  margin-right: 80px;
-}
-.footer ul li:last-child {
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-
-.footer ul li:last-child a {
-  display: block;
-  font-size: 28px;
-  margin: 10px;
-}
-
-.footer li i {
-  font-size: 26px;
-}
 }
 @media only screen and (min-width: 1024px) {
   .container {
@@ -840,13 +1053,27 @@ input:focus,textarea:focus {
     padding-left: 20px;
   }
 
-  .events, .form-reservation, .footer {
-    padding-top: 100px;
+  .events {
+    padding-top: 80px;
     padding-bottom: 100px;
   }
 
 
- 
+  .btn-center {
+    margin-bottom: 60px;
+  }
+
+  .contact-info {
+    width: 30%;
+  }
+
+  .contact-info li a {
+    font-size: 20px;
+  }
+
+  .contact-info li {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -872,8 +1099,8 @@ input:focus,textarea:focus {
   .btn:link,
   .btn:visited {
     width: 230px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .hero {
@@ -888,6 +1115,11 @@ input:focus,textarea:focus {
     padding-top: 70px;
   }
 
+
+  .hero .btn:hover {
+    opacity: .7;
+  }
+
   .header {
     position: initial;
   }
@@ -897,15 +1129,19 @@ input:focus,textarea:focus {
     display: block;
     position: initial;
     height: 100%;
+    width: auto;
   }
 
   .logo {
     width: auto;
+    margin-left: 30px;
   }
 
   .header .container {
-    flex-direction: column;
+    flex-direction: row-reverse;
+    align-items: flex-end;
     background: transparent;
+    justify-content: flex-start;
   }
 
   .nav ul {
@@ -957,6 +1193,23 @@ input:focus,textarea:focus {
   }
 }
 
+
+/* video */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -975,7 +1228,7 @@ input:focus,textarea:focus {
   margin: 0;
 }
 
-.active {
+.nav li a.active {
   font-weight: 700;
   color: #95373f;
 }
