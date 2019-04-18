@@ -5,6 +5,12 @@ $(document).ready(function () {
   });
   $(".close").on('click', function () {
     $(".nav").toggleClass('height');
+
+  });
+
+  $(".nav li a").on('click', function () {
+    $(".nav").toggleClass('height');
+    
   });
 });
 

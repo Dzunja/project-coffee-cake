@@ -13,7 +13,7 @@
     speed: 600,
     fade: true,
     cssEase: 'linear',
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000
   });
 
@@ -35,7 +35,7 @@
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 600,
           settings: {
             arrows: false,
             centerMode: true,
@@ -53,7 +53,7 @@
 
   $(document).ready(function() {
     
-    if($(window).width() >= 768) {      
+    if($(window).width() >= 1200) {      
       // INITIATE THE FOOTER
       siteFooter();
       // COULD BE SIMPLIFIED FOR THIS PEN BUT I WANT TO MAKE IT AS EASY TO PUT INTO YOUR SITE AS POSSIBLE
