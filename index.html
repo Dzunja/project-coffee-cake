@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/animation.css">
+
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 
   <meta name="theme-color" content="#fafafa">
@@ -35,7 +37,7 @@
 
   <div id="site-content">
 
-    <section class="hero">
+    <section class="hero animation" data-animation="fadeIn">
       <header class="header" id="header">
         <div class="container">
           <a href="#" class="logo"><img src="img/logo.png" alt="musicafe"></a>
@@ -73,13 +75,13 @@
     </section>
 
     <section class="cake container" id="cake">
-      <header>
+      <header  class="animation" data-animation="fadeIn">
         <h2>Cake</h2>
         <h5>Cake, cake, and more cake! It's what we're known for, and we make sure to have something for everyone: Take
           your cake fruit-forward, chocolate-on-chocolate, or try a traditional favorite.</h5>
       </header>
 
-      <article>
+      <article class="animation" data-animation="fadeInUp">
         <div class="cake-image">
           <a href="img/cake1.jpg" data-fancybox="gallery"> <img src="img/cake1.jpg" alt="cake1"></a>
         </div>
@@ -94,7 +96,7 @@
         </div>
       </article>
 
-      <article>
+      <article  class="animation" data-animation="fadeInUp">
         <div class="inner-text">
           <h3>Chocolate Moussee</h3>
           <span>$1.56</span>
@@ -108,7 +110,7 @@
 
       </article>
 
-      <article>
+      <article class="animation" data-animation="fadeInUp">
         <div class="cake-image">
           <a href="img/cake3.jpg" data-fancybox="gallery"> <img src="img/cake3.jpg" alt="cake3"></a>
         </div>
@@ -123,7 +125,7 @@
         </div>
       </article>
 
-      <article>
+      <article class="animation" data-animation="fadeInUp">
         <div class="inner-text">
           <h3>Caramel Cheesecake</h3>
           <span>$4.56</span>
@@ -138,7 +140,7 @@
       <!-- <a href="#" class="btn btn-center">View all menu</a> -->
     </section>
 
-    <section class="coffee" id="coffee">
+    <section class="coffee animation" id="coffee"  data-animation="fadeIn">
       <div class="container">
         <header class="section-header">
           <h2>Coffee</h2>
@@ -195,7 +197,7 @@
       </div>
     </section>
 
-    <section class="section our-place" id="ourplace">
+    <section class="section our-place animation" id="ourplace" data-animation="fadeIn">
 
       <div class="container">
         <header class="section-header ">
@@ -240,7 +242,7 @@
       </div>
     </section>
 
-    <section class="container events" id="events">
+    <section class="container events animation" id="events" data-animation="fadeIn">
       <div class="inner-text">
         <h3><span>Events<br></span> upcoming event</h3>
         <div>
@@ -327,6 +329,7 @@
   <script src="js/slick.min.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   <script src="js/smoot-scroll.js"></script>
 </body>

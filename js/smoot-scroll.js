@@ -16,7 +16,7 @@ $(document).ready(function($) {
         });
       });
 
-      $('body').fadeIn(2000);
+      // $('body').fadeIn(2000);
   })
 
   /* (smooth scroll)  */
