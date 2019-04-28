@@ -329,9 +329,9 @@ img {
 }
 
 .header .container {
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: space-between; */
+    justify-content: space-between;
     background: white;
 }
 
@@ -1148,7 +1148,12 @@ textarea:focus {
     .header {
         position: initial;
     }
-
+    .header .container {
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
+    }
     .nav {
         background: transparent;
         position: initial;
