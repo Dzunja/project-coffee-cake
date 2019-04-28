@@ -17,7 +17,6 @@ $(document).ready(function () {
 
   // section animation
 $('.animation').each(function() {
-  console.log('aaa');
   var waypoint = new Waypoint({
     element:this,
     handler:function(direction) {
@@ -26,7 +25,7 @@ $('.animation').each(function() {
       console.log(animation)
       $(this.element).addClass('animated ' + animation);
     },
-    offset: '75%' 
+    offset: '70%' 
   })
 })
 

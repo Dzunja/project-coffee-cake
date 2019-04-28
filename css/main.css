@@ -99,11 +99,55 @@ textarea {
     opacity: 0;
 }
 
-.animated {
+@keyframes bounceIntest {
+    0% {
+        transform: scale(0.1);
+        /* opacity: 0; */
+    }
+    60% {
+        transform: scale(1.1);
+        /* opacity: 1; */
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+/* .hero .inner {
+    animation-duration: 2s;
+    animation-name: bounceIntest;
+} */
+
+.hero.fadeIn {
+    animation-duration: 4s;
     -webkit-animation-duration: 2s;
+    -moz-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    -ms-animation-duration: 4s;
+    animation-timing-function: ease-in;
+}
+
+.hero .border {
+    animation-duration: 2s;
+    -webkit-animation-duration: 1.5s;
     -moz-animation-duration: 2s;
     -o-animation-duration: 2s;
     -ms-animation-duration: 2s;
+
+    animation-delay: 3s;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+}
+.animated {
+    animation-duration: 2s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    animation-timing-function: linear;
+
 
 }
 
@@ -285,11 +329,12 @@ img {
 }
 
 .header .container {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
     background: white;
 }
+
 
 .nav ul {
     display: flex;
@@ -1106,15 +1151,22 @@ textarea:focus {
 
     .nav {
         background: transparent;
-        display: block;
         position: initial;
         height: 100%;
         width: auto;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 94px;
     }
 
     .logo {
-        width: auto;
+        width: 150px;
         margin-left: 30px;
+        text-align: center;
+    margin: 0 auto;
+    /* width: 100%; */
+    margin-bottom: 14px;
+    display: block;
     }
 
     .header .container {
@@ -1229,6 +1281,7 @@ textarea:focus {
 
     .events {
         padding-bottom: 100px;
+
         padding-top: 70px;
     }
 
